@@ -357,9 +357,8 @@ footer {
 
 .footer-left .song-artist {
   display: inline-block;
-  width: 50%;
+  width: 60%;%;
   min-width: 50px;
-  margin: right 20px;
 }
 .footer-left .name-artist {
   font-size: 12px;
