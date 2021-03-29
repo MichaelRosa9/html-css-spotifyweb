@@ -236,10 +236,7 @@ nav .nav-bottom {
     height: 40%;
   }
 
-  nav .playlist,
-  nav .personal-playlist, {
-    height: 0;
-  }
+
 
   .nav-bottom .app-install::after {
     background-color: none;
@@ -357,7 +354,7 @@ footer {
 
 .footer-left .song-artist {
   display: inline-block;
-  width: 60%;%;
+  width: 60%;
   min-width: 50px;
 }
 .footer-left .name-artist {
