@@ -388,8 +388,10 @@ footer {
 }
 
 /* footer-center */
+.footer-center {
+  width: 40%;
+}
 .footer-center .player {
-  max-width: 600px;
   min-width: 200px;
   text-align: center;
 }
@@ -415,16 +417,18 @@ footer {
 }
 
 /* music bar green */
-.footer-center .horizzontal-bar {
+.footer-center .horizzontal-bar,
+.footer-right .horizzontal-bar  {
   position: relative;
   display: inline-block;
   height: 3px;
-  width: 70%;
+  width: 60%;
   vertical-align: middle;
   background-color: #4F4F4F;
 }
 
-.footer-center .horizzontal-bar::before {
+.footer-center .horizzontal-bar::before,
+.footer-right .horizzontal-bar::before {
   position: absolute;
   content: '';
   left: 0;
@@ -433,13 +437,16 @@ footer {
   background-color: #999999;
 }
 
-.footer-center .horizzontal-bar:hover {
+.footer-center .horizzontal-bar:hover,
+.footer-right .horizzontal-bar:hover {
   cursor: pointer;
 }
-.footer-center .horizzontal-bar:hover.horizzontal-bar::before {
+.footer-center .horizzontal-bar:hover.horizzontal-bar::before,
+.footer-right .horizzontal-bar:hover.horizzontal-bar::before {
   background-color: #88E03B;
 }
-.footer-center .horizzontal-bar:hover.horizzontal-bar::after {
+.footer-center .horizzontal-bar:hover.horizzontal-bar::after,
+.footer-right .horizzontal-bar:hover.horizzontal-bar::after {
   position: absolute;
   content: '';
   left: 20%;
@@ -453,11 +460,17 @@ footer {
 
 /* media */
 /* xs */
-/* @media all and (max-width: 500px){
-  .footer-center .play-buttons i {
+@media all and (max-width: 700px){
+  .footer-center .play-buttons i,
+  .footer-center .time-signature {
     margin: 0;
   }
-} */
+}
+
+@media all and (min-width: 500px)
+and (max-width: 650px) {
+
+}
 /* footer-right */
 .footer-right {
   width: 230px;
@@ -473,41 +486,10 @@ footer {
   margin: 0 5px;
 }
 
-.footer-right .progress-bar {
-  width: 50%;
+.footer-right .progres-bar {  
+  width: 49%;
+  display: inline-block;
 }
 .footer-right .horizzontal-bar {
-  position: relative;
-  display: inline-block;
-  height: 3px;
-  width: 50%;
-  vertical-align: middle;
-  background-color: #4F4F4F;
-}
-
-.footer-right .horizzontal-bar::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  height: 3px;
-  width: 20%;
-  background-color: #999999;
-}
-
-.footer-right .horizzontal-bar:hover {
-  cursor: pointer;
-}
-.footer-right .horizzontal-bar:hover.horizzontal-bar::before {
-  background-color: #88E03B;
-}
-.footer-right .horizzontal-bar:hover.horizzontal-bar::after {
-  position: absolute;
-  content: '';
-  left: 20%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: #fff;
+  width: 90%;
 }
