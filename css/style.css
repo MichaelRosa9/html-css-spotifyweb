@@ -79,7 +79,7 @@ nav h5 {
 /* nav li */
 nav li:not(:first-child), 
 nav ul {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 /* nav a */
@@ -123,7 +123,7 @@ nav .home-search-library img {
 
 /* playlist */
 nav .playlist {
-  height: 50%;
+  height: 60%;
   overflow: hidden;
 }
 
@@ -132,6 +132,7 @@ nav .playlist h5 {
 }
 .playlist-container {
 height: 100%;
+overflow: hidden;
 }
 
 nav .create-playlist {
@@ -155,7 +156,7 @@ nav .create-playlist:hover::before {
 
 nav .personal-playlist {
   padding-top: 0;
-  height: 70%;
+  height: 60%;
   overflow : auto;
 }
 
@@ -366,15 +367,14 @@ nav .nav-bottom {
 }
 .covers .row {
   display: flex;
-  justify-content: /* space-around */;
   align-items: center;
-  
+  flex-wrap: wrap;
 }
 
 .covers .album-cover {
-  width: /* 300px */;
-  min-width: 100px;
   padding: 1%;
+  text-align: center;
+  flex-basis: 20%;
 }
 
 .covers img {
@@ -383,20 +383,17 @@ nav .nav-bottom {
   object-fit: cover;
 }
 
-.album-cover {
-  text-align: center;
-}
-
 /* media */
 /* xs */
-@media all and (max-width: 500px) {
-  .covers .row {
-    flex-wrap: wrap;
+@media all and (max-width: 767px) {
+  .covers .album-cover {
+    flex-basis: 50%;
   }
 }
-@media all and (max-width: 991px) {
-  .covers .row {
-    flex-wrap: wrap;
+@media all and (min-width: 768px)
+and (max-width: 991px) {
+  .covers .album-cover {
+    flex-basis: 30%;
   }
 }
 
