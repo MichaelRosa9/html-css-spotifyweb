@@ -45,6 +45,8 @@ a {
 }
 /* nav */
 nav {
+  position: relative;
+  z-index: 9999;
   float: left;
   width: 230px;
   height: 100%;
@@ -53,7 +55,7 @@ nav {
 /* nav top */
 
 nav .nav-top {
-  height: calc(100% - 90px);
+  height: calc(100% - 100px);
 }
 
 nav .logo {
@@ -174,6 +176,11 @@ nav .nav-bottom {
   font-size: 12px;
 }
 
+.nav-bottom .app-install img {
+  width: 10%;
+  vertical-align: middle;
+  margin-right:10px ;
+}
 
 .nav-bottom .app-install::after {
   position: absolute;
@@ -208,7 +215,7 @@ nav .nav-bottom {
 /* media nav */
 
 /* xs */
-@media all and (max-width: 500px){
+@media all and (max-width: 767px){
   nav {
     width: 90px;
   }
@@ -237,33 +244,35 @@ nav .nav-bottom {
   }
 
 
+  /* media nav bottom */
+  .nav-bottom .app-install {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bottom .app-install img {
+    width: 100%;
+    height: 100%;
+    margin: 0  0 6px;
+    padding: 0;
+  }
 
   .nav-bottom .app-install::after {
-    background-color: none;
+    display: none;
     width: 0;
     height: 1px;  
     left:0;
     margin-right: 0;
   }
 
-  .nav-bottom .app-install {
-
-    font-size: 20px;
-    text-align: center;
-  }
-
-
-  
   .nav-bottom .account-id {
     padding: 0;
-    width: 100%;
+    justify-content: center;
   }
 
   .nav-bottom .account-id img {
-    display: block;
-    margin: 0 auto;
-    display: inline;
-    width: 30%;
+    width: 30%;  
   }
 }
 
@@ -305,7 +314,7 @@ nav .nav-bottom {
 }
 
 /* media xs */
-@media all and (max-width: 500px){
+@media all and (max-width: 767px){
   .container {
     width: calc(100% - 90px);
     
@@ -410,6 +419,7 @@ nav .nav-bottom {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
+  transition: opacity 0.2s;
 }
 
 .overlay-play i {
@@ -586,16 +596,18 @@ footer {
 
 /* media */
 /* xs */
-@media all and (max-width: 700px){
+@media all and (max-width: 767px){
   .footer-center .play-buttons i,
   .footer-center .time-signature {
     margin: 0;
   }
 }
 
-@media all and (min-width: 500px)
-and (max-width: 650px) {
-
+@media all and (min-width: 768px)
+and (max-width: 991px) {
+  .footer-center .time-signature  {
+    margin: 0;
+  }
 }
 /* footer-right */
 .footer-right {
