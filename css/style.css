@@ -279,6 +279,7 @@ nav .nav-bottom {
 /* call to action */
 .call-to-action {
   position: fixed;
+  z-index: 999;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -362,26 +363,70 @@ nav .nav-bottom {
   margin-left: 20px;
 }
 
-.covers h2 {
+.covers .cover-title {
   margin-bottom: 30px;
 }
+.covers .cover-subtitle {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
 .covers .row {
   display: flex;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
 .covers .album-cover {
-  padding: 1%;
+  padding-right: 20px;
+  padding-top: 1%;
   text-align: center;
-  flex-basis: 20%;
+  flex-basis: 16%; 
 }
 
-.covers img {
-  height: 100%;
+.covers .album-image {
+  position: relative;
+  width: 100%;
+}
+
+.covers .album-image img {
   width: 100%;
   object-fit: cover;
 }
+
+.covers .album-cover h5 {
+  margin: 10px 0;
+}
+
+/* overlay on img */
+.covers .overlay-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.overlay-play i {
+  font-size: 50px;  
+}
+
+.covers .overlay-play:hover {
+  opacity: 1;
+}
+
+/* populare image with border-radius-50 */
+.covers.popular .album-image img {
+  border-radius: 50%;
+}
+
+
+
 
 /* media */
 /* xs */
@@ -390,6 +435,7 @@ nav .nav-bottom {
     flex-basis: 50%;
   }
 }
+/* md */
 @media all and (min-width: 768px)
 and (max-width: 991px) {
   .covers .album-cover {
